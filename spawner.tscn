@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://cmjel1sqtuodx"]
+
+[ext_resource type="Script" uid="uid://dw7k77tod4b55" path="res://spawner.gd" id="1_ttk4a"]
+[ext_resource type="PackedScene" uid="uid://bb0vu4dopiw35" path="res://enemy.tscn" id="2_mcln3"]
+[ext_resource type="Script" uid="uid://bghux5hajy6y3" path="res://EnemyType.gd" id="3_qmymf"]
+[ext_resource type="Resource" uid="uid://mvicf8fpiqqe" path="res://Resources/CatMagicPink.tres" id="4_bt5rc"]
+[ext_resource type="Resource" uid="uid://v8asi5ctj0vv" path="res://Resources/CuboGray.tres" id="5_g67ry"]
+[ext_resource type="Resource" uid="uid://bam8x84phukd2" path="res://Resources/CuboGreen.tres" id="6_lvome"]
+[ext_resource type="Resource" uid="uid://cuevis6vr78m0" path="res://Resources/CuboWhite.tres" id="7_sy5nt"]
+[ext_resource type="Resource" uid="uid://ckfpos8eqwj1l" path="res://Resources/MisteryBlack.tres" id="8_iv4qy"]
+
+[node name="Spawner" type="Node2D"]
+script = ExtResource("1_ttk4a")
+enemy = ExtResource("2_mcln3")
+enemy_types = Array[ExtResource("3_qmymf")]([ExtResource("4_bt5rc"), ExtResource("5_g67ry"), ExtResource("6_lvome"), ExtResource("7_sy5nt"), ExtResource("8_iv4qy")])
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI"]
+offset_left = 1000.0
+offset_top = 10.0
+offset_right = 1042.0
+offset_bottom = 50.0
+
+[node name="Minute" type="Label" parent="UI/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="Label2" type="Label" parent="UI/HBoxContainer"]
+layout_mode = 2
+text = ":"
+
+[node name="Second" type="Label" parent="UI/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "00"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Pattern" type="Timer" parent="."]
+wait_time = 10.0
+ignore_time_scale = true
+
+[node name="Elite" type="Timer" parent="."]
+wait_time = 9.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Pattern" to="." method="_on_pattern_timeout"]

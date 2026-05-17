@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://ckfpos8eqwj1l"]
+
+[ext_resource type="Script" uid="uid://bghux5hajy6y3" path="res://EnemyType.gd" id="1_0jtj1"]
+[ext_resource type="Texture2D" uid="uid://cwiuitnhynj7f" path="res://Mobs/RPG Battlers 3/9 v1.png" id="2_fre0a"]
+
+[resource]
+script = ExtResource("1_0jtj1")
+title = "MisteryBlack"
+texture = ExtResource("2_fre0a")
+damage = 4.0
+metadata/_custom_type_script = "uid://bghux5hajy6y3"

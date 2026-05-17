@@ -1,0 +1,18 @@
+# Godot 4+
+.godot/
+
+# Imports
+.import/
+
+# Mono
+.mono/
+
+# Export presets
+export_presets.cfg
+
+# Builds
+builds/
+
+# OS
+.DS_Store
+Thumbs.db

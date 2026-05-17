@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://mvicf8fpiqqe"]
+
+[ext_resource type="Script" uid="uid://bghux5hajy6y3" path="res://EnemyType.gd" id="1_1oy56"]
+[ext_resource type="Texture2D" uid="uid://b6q43axlw8h3n" path="res://Mobs/RPG Battlers 3/10 v1.png" id="2_twryi"]
+
+[resource]
+script = ExtResource("1_1oy56")
+title = "CatMagicPink"
+texture = ExtResource("2_twryi")
+damage = 3.0
+metadata/_custom_type_script = "uid://bghux5hajy6y3"

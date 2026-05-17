@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://bam8x84phukd2"]
+
+[ext_resource type="Script" uid="uid://bghux5hajy6y3" path="res://EnemyType.gd" id="1_alxg6"]
+[ext_resource type="Texture2D" uid="uid://caxlqd5pe1njf" path="res://Mobs/RPG Battlers 3/2 v1.png" id="2_ckdgy"]
+
+[resource]
+script = ExtResource("1_alxg6")
+title = "CuboGreen"
+texture = ExtResource("2_ckdgy")
+damage = 1.0
+metadata/_custom_type_script = "uid://bghux5hajy6y3"
